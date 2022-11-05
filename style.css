@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+body {
+  overflow: hidden;
+}
+
 #time {
   position: relative;
   text-align: center;
@@ -14,6 +20,24 @@
   opacity: 0.8;
 }
 
+input {
+  text-align: center;
+  width: 1000px;
+  border: 0;
+  font-size: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+  caret-color: transparent;
+  font-family: "Times New Roman", Times, serif;
+
+  font-weight: bolder;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
 #format {
   font-size: 50px;
   padding-top: 0;
@@ -23,9 +47,16 @@
 #container {
   position: absolute;
   flex-flow: column;
-  height: 99%;
-  width: 99%;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+#footer {
+  position: relative;
+  top: 785px;
+  opacity: 0.8;
 }
