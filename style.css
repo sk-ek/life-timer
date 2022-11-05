@@ -7,10 +7,25 @@
   padding-top: 0;
 }
 
+#indicator {
+  font-size: 15x;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+#format {
+  font-size: 50px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
 #container {
   position: absolute;
+  flex-flow: column;
   height: 99%;
   width: 99%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }

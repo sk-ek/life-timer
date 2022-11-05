@@ -3,6 +3,7 @@ let birthday = new Date(Date.parse("March 29, 2008"));
 let currentDate = new Date();
 let timer = document.querySelector("#time");
 let timerFormat = document.querySelector("#format");
+let indicator = document.querySelector("#indicator");
 
 let years = (currentDate.getTime() - birthday.getTime()) / 31536000000;
 let yearsRaw = currentDate.getTime() - birthday.getTime();
@@ -28,8 +29,6 @@ timerFormat.innerHTML =
 
 setInterval(updateFormat, 1000);
 function updateFormat() {
-  timerFormat.innerHTML =
-    yearsLog + ":" + days + ":" + hours + ":" + minutes + ":" + seconds;
   currentDate = new Date();
   seconds = Math.floor((currentDate - birthday) / 1000);
   minutes = Math.floor(seconds / 60);
@@ -45,6 +44,8 @@ function updateFormat() {
     hours * 60 * 60 -
     minutes * 60 -
     yearsLog * 365 * 24 * 60 * 60;
+  timerFormat.innerHTML =
+    yearsLog + ":" + days + ":" + hours + ":" + minutes + ":" + seconds;
 }
 
 // years = parseFloat(years.toFixed(9));
